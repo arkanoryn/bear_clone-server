@@ -36,5 +36,8 @@ defmodule BearClone.Endpoint do
     key: "_bear_clone_key",
     signing_salt: "CyyDgt02"
 
+
+  plug CORSPlug
+
   plug BearClone.Router
 end

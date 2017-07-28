@@ -20,7 +20,8 @@ defmodule BearClone.Mixfile do
   def application do
     [
       mod: {BearClone, []},
-      extra_applications: [:logger]
+      extra_applications: [:logger
+                          ]
     ]
   end
 
@@ -38,7 +39,9 @@ defmodule BearClone.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:faker, "~> 0.8", only: :test},
+      {:cowboy, "~> 1.0"},
+      {:cors_plug, "~> 1.2"}
     ]
   end
 

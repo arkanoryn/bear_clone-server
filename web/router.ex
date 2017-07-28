@@ -7,5 +7,7 @@ defmodule BearClone.Router do
 
   scope "/api", BearClone do
     pipe_through :api
+
+    resources "/notes", NoteController, except: [:new, :edit]
   end
 end
