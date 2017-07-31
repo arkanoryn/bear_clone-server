@@ -29,3 +29,7 @@ erl_crash.dump
 
 # Hiding the secret config files
 *.secret.exs
+
+# Ignore documentation
+doc/
+doc/*

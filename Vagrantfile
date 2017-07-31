@@ -3,8 +3,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 VM_NAME = "bear_clone_vm"
-MEMORY_SIZE_MB = 1024
-NUMBER_OF_CPUS = 2
+MEMORY_SIZE_MB = 2048
+NUMBER_OF_CPUS = 3
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/xenial64"
