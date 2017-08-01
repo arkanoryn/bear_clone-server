@@ -108,4 +108,9 @@ defmodule BearClone.User do
     The result is an Ecto error changeset, which indicated the error or conflict.
   """
   defdelegate update(params, id), to: BearClone.User.Alter
+
+  @doc """
+   Dev function, will be removed
+  """
+  defdelegate rand(), to: BearClone.User.Alter
 end
