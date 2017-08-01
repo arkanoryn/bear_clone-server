@@ -14,6 +14,6 @@ defmodule BearClone.Note do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:title, :body])
-    |> validate_required([:title, :body])
+    |> validate_required([:title])
   end
 end

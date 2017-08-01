@@ -37,7 +37,8 @@ defmodule BearClone.Endpoint do
     signing_salt: "CyyDgt02"
 
 
-  plug CORSPlug
+  # plug CORSPlug, origin: "*",   methods: ["GET", "POST"]
+  plug Corsica, allow_headers: ~w(Accept Content-Type Authorization Origin)
 
   plug BearClone.Router
 end
