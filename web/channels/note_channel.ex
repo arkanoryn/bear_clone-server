@@ -9,7 +9,13 @@ defmodule BearClone.NoteChannel do
   end
 
   def join("notes:" <> note_id, _params, socket) do
-    note = Repo.get!(BearClone.Note, note_id)
+    note =
+      case Repo.get(BearClone.Note, note_id) do
+        nil ->
+          Repo.insert!(BearClone.Note.changeset(%BearClone.Note{}, %{title: "New Note", body: "", status: "GENERAL"}))
+        note ->
+          note
+      end
     response = %{note: Phoenix.View.render_one(note, BearClone.NoteView, "note.json")}
 
     {:ok, response, assign(socket, :note, note)}
