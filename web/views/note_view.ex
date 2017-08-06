@@ -12,6 +12,8 @@ defmodule BearClone.NoteView do
   def render("note.json", %{note: note}) do
     %{id: note.id,
       title: note.title,
-      body: note.body}
+      body: note.body,
+      status: note.status,
+    }
   end
 end

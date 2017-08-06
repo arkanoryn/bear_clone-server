@@ -4,7 +4,8 @@ defmodule BearClone.Repo.Migrations.CreateNote do
   def change do
     create table(:notes) do
       add :title, :string
-      add :body, :string
+      add :body, :text
+      add :status, :string
 
       timestamps()
     end

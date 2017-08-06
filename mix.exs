@@ -40,7 +40,7 @@ defmodule BearClone.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:faker, "~> 0.8", only: :test},
+      {:faker, "~> 0.8", only: [:test, :dev]},
       {:cowboy, "~> 1.0"},
       {:cors_plug, "~> 1.2"},
       {:corsica, "~> 0.5.0"},

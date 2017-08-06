@@ -2,8 +2,9 @@ defmodule BearClone.Note do
   use BearClone.Web, :model
 
   schema "notes" do
-    field :title, :string
-    field :body, :string
+    field :title,  :string
+    field :body,   :string
+    field :status, :string
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule BearClone.Note do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :body])
+    |> cast(params, [:title, :body, :status])
     |> validate_required([:title])
   end
 end
