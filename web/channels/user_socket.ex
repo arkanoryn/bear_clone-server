@@ -3,6 +3,7 @@ defmodule BearClone.UserSocket do
 
   ## Channels
   # channel "room:*", BearClone.RoomChannel
+  channel "notes:*", BearClone.NoteChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
