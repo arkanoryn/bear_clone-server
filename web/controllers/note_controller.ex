@@ -5,6 +5,8 @@ defmodule BearClone.NoteController do
 
   def index(conn, _params) do
     notes = Repo.all(Note)
+
+    :timer.sleep(2000)
     render(conn, "index.json", notes: notes)
   end
 

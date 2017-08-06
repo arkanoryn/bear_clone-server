@@ -18,7 +18,7 @@ Once install, setup vagrant with `vagrant up` and log in: `vagrant ssh`.
 ### Application
 To start the app:
   * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
+  * Create, migrate and seed your database with `mix ecto.setup`
   * Install Node.js dependencies with `npm install`
   * Start Phoenix endpoint with `mix phoenix.server`
 
