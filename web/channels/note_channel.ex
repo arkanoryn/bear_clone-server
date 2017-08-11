@@ -4,7 +4,6 @@ defmodule BearClone.NoteChannel do
   alias BearClone.Repo
 
   def join("notes:lobby", _params, socket) do
-    # {:ok, 'ok', assign(socket, :note, 'lobby')}
     {:ok, socket}
   end
 
@@ -21,7 +20,6 @@ defmodule BearClone.NoteChannel do
     {:ok, response, assign(socket, :note, note)}
   end
 
-  require IEx
   def handle_in("update_note", params, socket) do
     changeset =
       socket.assigns.note
