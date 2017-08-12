@@ -21,7 +21,8 @@ defmodule BearClone.Mixfile do
     [
       mod: {BearClone, []},
       extra_applications: [:logger,
-                           :corsica
+                           :corsica,
+                           :comeonin,
                           ]
     ]
   end
@@ -35,7 +36,7 @@ defmodule BearClone.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0-rc"},
+      {:phoenix, "~> 1.2"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
@@ -44,6 +45,8 @@ defmodule BearClone.Mixfile do
       {:cowboy, "~> 1.0"},
       {:cors_plug, "~> 1.2"},
       {:corsica, "~> 0.5.0"},
+      {:comeonin, "~> 2.5"},
+      {:guardian, "~> 0.14.0"},
     ]
   end
 
