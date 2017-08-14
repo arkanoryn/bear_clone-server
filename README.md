@@ -23,3 +23,9 @@ To start the app:
   * Start Phoenix endpoint with `mix phoenix.server`
 
 You can start coding your frontend application and make your request on [`localhost:4000`](http://localhost:4000).
+
+### Demo user
+A user is already created in order for you to test your login front end.
+The credentials are:
+> * username: `demo`
+> * password: `password`
