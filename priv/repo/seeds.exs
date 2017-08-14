@@ -32,3 +32,6 @@ insert_random_note = fn () ->
 end
 
 1..10 |> Enum.each(fn(_x) -> insert_random_note.() end)
+
+changeset = BearClone.User.registration_changeset(%BearClone.User{}, %{username: "demo", password: "password"})
+BearClone.Repo.insert!(changeset)
