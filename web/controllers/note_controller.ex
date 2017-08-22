@@ -11,6 +11,7 @@ defmodule BearClone.NoteController do
   end
 
   def create(conn, %{"note" => note_params}) do
+    IO.puts "BORDEL DE MERDE ======================="
     changeset = Note.changeset(%Note{}, note_params)
 
     case Repo.insert(changeset) do
@@ -32,6 +33,7 @@ defmodule BearClone.NoteController do
   end
 
   def update(conn, %{"id" => id, "note" => note_params}) do
+    IO.puts "CA VEUX PAS MARCHER PUTAIN =================="
     note = Repo.get!(Note, id)
     changeset = Note.changeset(note, note_params)
 

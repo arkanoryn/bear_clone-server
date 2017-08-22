@@ -6,6 +6,7 @@ defmodule BearClone.Note do
     field :body,   :string
     field :status, :string
 
+      many_to_many :users, BearClone.User, join_through: "users_notes"
     timestamps()
   end
 

@@ -6,6 +6,9 @@ defmodule BearClone.User do
     field :password, :string, virtual: true
     field :password_hash, :string
 
+    #belongs_to :note_ids, BearClone.Note
+    many_to_many :notes, BearClone.Note, join_through: "users_notes"
+
     timestamps()
   end
 
