@@ -15,6 +15,7 @@ trash = "TRASH"
 
 note_1 = %BearClone.Note{title: "This is my first note", body: "and its body.", status: general}
 note_2 = %BearClone.Note{title: "Overwatch", body: "All Overwatch players are lazy ppl. Everybody knows it... :/", status: general}
+note_2 = %BearClone.Note{title: "StarCraft 2", body: "All StarCraft 2 players are annoying ppl. Everybody knows it... :/", status: general}
 BearClone.Repo.insert!(note_1)
 BearClone.Repo.insert!(note_2)
 
